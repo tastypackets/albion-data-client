@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+  background-color: #20232a;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #e8e6e3;
+  overflow: auto;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.App-header {
+  font-size: calc(10px + 2vmin);
+  color: white;
+
+  width: 100%;
+}
+
+.App-header a,
+.App-header a:visited,
+.App-header a:hover {
+  color: rgb(57, 175, 202);
+  text-decoration: none;
+}
+
+.search-wrapper {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.page {
+  min-width: 300px;
+}
+
+.page-selection {
+  width: 175px;
+}
+
+.find-item {
+  width: 300px;
+}
+
+.find-quality,
+.find-enchantment,
+.find-city {
+  width: 200px;
+  margin-left: 5px;
+}
+
+.cities-wrapper {
+  display: flex;
+  flex-direction: column;
+}

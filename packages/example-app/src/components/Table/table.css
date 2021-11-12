@@ -1,0 +1,18 @@
+.cities-wrapper table {
+  margin-bottom: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #303436;
+}
+
+table td {
+  border: 1px solid #303436;
+}
+
+table td,
+table th {
+  padding: 5px 10px;
+}
