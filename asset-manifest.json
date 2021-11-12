@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.c66ad165.chunk.css",
-    "main.js": "/static/js/main.be8478ae.chunk.js",
-    "main.js.map": "/static/js/main.be8478ae.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.26a4dc43.js",
-    "runtime-main.js.map": "/static/js/runtime-main.26a4dc43.js.map",
-    "static/js/2.91411a6f.chunk.js": "/static/js/2.91411a6f.chunk.js",
-    "static/js/2.91411a6f.chunk.js.map": "/static/js/2.91411a6f.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.c66ad165.chunk.css.map": "/static/css/main.c66ad165.chunk.css.map",
-    "static/js/2.91411a6f.chunk.js.LICENSE.txt": "/static/js/2.91411a6f.chunk.js.LICENSE.txt"
+    "main.css": "/albion-data-client/static/css/main.c66ad165.chunk.css",
+    "main.js": "/albion-data-client/static/js/main.be8478ae.chunk.js",
+    "main.js.map": "/albion-data-client/static/js/main.be8478ae.chunk.js.map",
+    "runtime-main.js": "/albion-data-client/static/js/runtime-main.3913fe11.js",
+    "runtime-main.js.map": "/albion-data-client/static/js/runtime-main.3913fe11.js.map",
+    "static/js/2.91411a6f.chunk.js": "/albion-data-client/static/js/2.91411a6f.chunk.js",
+    "static/js/2.91411a6f.chunk.js.map": "/albion-data-client/static/js/2.91411a6f.chunk.js.map",
+    "index.html": "/albion-data-client/index.html",
+    "static/css/main.c66ad165.chunk.css.map": "/albion-data-client/static/css/main.c66ad165.chunk.css.map",
+    "static/js/2.91411a6f.chunk.js.LICENSE.txt": "/albion-data-client/static/js/2.91411a6f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.26a4dc43.js",
+    "static/js/runtime-main.3913fe11.js",
     "static/js/2.91411a6f.chunk.js",
     "static/css/main.c66ad165.chunk.css",
     "static/js/main.be8478ae.chunk.js"
