@@ -1,0 +1,10 @@
+.history-table-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.history-table-title img {
+  width: 50px;
+  height: 100%;
+}

@@ -1,0 +1,10 @@
+{
+  "extends": "@tsconfig/recommended/tsconfig.json",
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "removeComments": true,
+    "outDir": "./dist",
+    "sourceMap": false,
+    "declaration": true
+  }
+}

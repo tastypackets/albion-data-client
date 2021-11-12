@@ -1,0 +1,10 @@
+{
+  "name": "albion-data",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
