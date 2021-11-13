@@ -14,7 +14,11 @@ import {
 } from "../../options";
 import { selectTheme } from "../../selectTheme";
 
-export function Chart(): ReactElement {
+type ChartProps = {
+  showIcons: boolean;
+};
+
+export function Chart({ showIcons }: ChartProps): ReactElement {
   const [selectedItem, setSelectedItem] = useState<ItemOption | null>(null);
   const [selectedEnchantment, setSelectedEnchantment] =
     useState<EnchantmentOption | null>(null);
@@ -77,6 +81,7 @@ export function Chart(): ReactElement {
           selectedMarket={selectedMarket}
           selectedQuality={selectedQuality}
           selectedEnchantment={selectedEnchantment}
+          showIcons={showIcons}
         />
       )}
     </div>

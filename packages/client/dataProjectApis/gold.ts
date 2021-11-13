@@ -1,12 +1,8 @@
 import { TGold } from "@albion-data/types";
-import { AxiosResponse } from "axios";
+import axios, { AxiosResponse } from "axios";
 
-import {
-  axiosClient,
-  convertDateToString,
-  dynamicQueryParams,
-  appendUTC,
-} from "./utils";
+import { convertDateToString, dynamicQueryParams, appendUTC } from "../utils";
+import { baseGoldUrl } from "./baseUrl";
 
 /**
  * @description Paramters for Gold API calls
@@ -29,8 +25,8 @@ export async function getGoldRaw(
   const startDate = convertDateToString(params?.startDate);
   const endDate = convertDateToString(params?.endDate);
 
-  const url = `Gold.json`;
-  return await axiosClient.get<TGold[]>(url, {
+  const url = `${baseGoldUrl}.json`;
+  return await axios.get<TGold[]>(url, {
     params: dynamicQueryParams({
       date: startDate,
       end_date: endDate,

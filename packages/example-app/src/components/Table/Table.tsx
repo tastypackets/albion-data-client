@@ -34,7 +34,7 @@ export function Table<T extends TRow>({ columns, data, title }: TableProps<T>) {
       <thead>
         {title && (
           <tr>
-            <th colSpan={4}>
+            <th colSpan={columns.length}>
               <h3>{title}</h3>
             </th>
           </tr>

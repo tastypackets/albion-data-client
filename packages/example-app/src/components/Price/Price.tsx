@@ -14,7 +14,11 @@ import {
 import { selectTheme } from "../../selectTheme";
 import { PriceItem } from "./PriceItem";
 
-export function Price(): ReactElement {
+type PriceProps = {
+  showIcons: boolean;
+};
+
+export function Price({ showIcons }: PriceProps): ReactElement {
   const [selectedItem, setSelectedItem] = useState<ItemOption | null>(null);
   const [selectedQuality, setSelectedQuality] = useState<QualityOption | null>(
     null
@@ -79,6 +83,7 @@ export function Price(): ReactElement {
           selectedMarket={selectedMarket}
           selectedQuality={selectedQuality}
           selectedEnchantment={selectedEnchantment}
+          showIcons={showIcons}
         />
       )}
     </div>

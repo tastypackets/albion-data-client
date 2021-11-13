@@ -1,5 +1,4 @@
 import {
-  TItemID,
   TMarkets,
   QUALITIES_ENUM,
   AllowedTimeScales,
@@ -7,23 +6,22 @@ import {
   THistory,
   marketList,
 } from "@albion-data/types";
-import { AxiosResponse } from "axios";
-import dayjs from "dayjs";
+import axios, { AxiosResponse } from "axios";
 
 import {
-  axiosClient,
   flattenOptionalArray,
   convertDateToString,
   dynamicQueryParams,
   appendUTC,
-} from "./utils";
+} from "../utils";
+import { baseChartsUrl, historyBaseUrl } from "./baseUrl";
 
 /**
  * @description Paramters for Chart API calls, timeScale can only be used when selecting one item and one city
  */
 export type TChartParams = {
   /** @description ID of the item you want to lookup */
-  itemList: TItemID | TItemID[];
+  itemList: string | string[];
   /** @description The city or cities to lookup the item in */
   locations?: TMarkets | TMarkets[];
   /** @description The date to start the query */
@@ -49,8 +47,8 @@ export async function getChartRaw(
   const startDate = convertDateToString(params.startDate);
   const endDate = convertDateToString(params.endDate);
 
-  const url = `Charts/${encodeURIComponent(items)}.json`;
-  return await axiosClient.get<TChart[]>(url, {
+  const url = `${baseChartsUrl}/${encodeURIComponent(items)}.json`;
+  return await axios.get<TChart[]>(url, {
     params: dynamicQueryParams({
       locations,
       date: startDate,
@@ -90,8 +88,8 @@ export async function getChartHistoryRaw(
   const startDate = convertDateToString(params.startDate);
   const endDate = convertDateToString(params.endDate);
 
-  const url = `History/${encodeURIComponent(items)}.json`;
-  return await axiosClient.get<THistory[]>(url, {
+  const url = `${historyBaseUrl}/${encodeURIComponent(items)}.json`;
+  return await axios.get<THistory[]>(url, {
     params: dynamicQueryParams({
       locations,
       date: startDate,
