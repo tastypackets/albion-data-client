@@ -1,6 +1,6 @@
 {
   "name": "@albion-data/client",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Albion Online Data Client",
   "main": "dist/index.js",
   "repository": "https://github.com/tastypackets/albion-data-client",
