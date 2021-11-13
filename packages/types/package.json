@@ -14,5 +14,11 @@
   "scripts": {
     "build": "tsc",
     "prepublish": "yarn build"
-  }
+  },
+  "keywords": [
+    "albion",
+    "types",
+    "data",
+    "albion online"
+  ]
 }

@@ -22,5 +22,13 @@
   "scripts": {
     "build": "yarn tsc",
     "prepublish": "yarn build"
-  }
+  },
+  "keywords": [
+    "albion",
+    "client",
+    "data",
+    "albion online",
+    "render",
+    "api"
+  ]
 }
