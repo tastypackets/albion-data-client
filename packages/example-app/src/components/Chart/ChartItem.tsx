@@ -1,12 +1,12 @@
-import { ReactElement, useEffect, useState, useMemo } from "react";
+import { ReactElement, useMemo } from "react";
 import { useQuery } from "react-query";
 import dayjs from "dayjs";
 import {
-  TMarkets,
   QUALITIES_ENUM,
   TItemID,
   ENCHANTMENTS_ENUM,
   getChartData,
+  getItemIconUrl,
 } from "@albion-data/client";
 
 import {
@@ -17,7 +17,7 @@ import {
 } from "../../options";
 import { Table, TColumn } from "../Table";
 import { Loader } from "../Loader";
-import { resolveItemName, resolveImg } from "../../utils";
+import { resolveItemName } from "../../utils";
 import { ItemDescription } from "../ItemDescription";
 
 type ChartProps = {
@@ -25,19 +25,17 @@ type ChartProps = {
   selectedMarket?: MarketOptions | null;
   selectedQuality?: QualityOption | null;
   selectedEnchantment?: EnchantmentOption | null;
+  showIcons: boolean;
 };
 
 type FormattedChart = {
   timestamps: string;
   prices_avg: number;
   item_count: number;
-  location: TMarkets;
   item_id: TItemID;
-  quality: number;
 };
 
 const columns: TColumn<FormattedChart>[] = [
-  { label: "Quality", accessor: (row) => QUALITIES_ENUM[row.quality] },
   { label: "Avg Price", accessor: "prices_avg" },
   { label: "Count", accessor: "item_count" },
   { label: "Time Stamp", accessor: "timestamps", date: true },
@@ -53,8 +51,8 @@ export function ChartItem({
   selectedMarket,
   selectedQuality,
   selectedEnchantment,
+  showIcons,
 }: ChartProps): ReactElement {
-  const [imgLoaded, setImagLoaded] = useState<boolean>(false);
   const itemName = resolveItemName(
     selectedItem.value,
     selectedEnchantment?.value
@@ -75,48 +73,47 @@ export function ChartItem({
     }
   );
 
-  useEffect(() => {
-    // Weird hack to try and wait for browser to cache this img lol, prob way better way todo this /shrug
-    const img = new Image();
-    img.onload = () => {
-      setImagLoaded(true);
-    };
-    img.src = resolveImg(itemName);
-    // If it takes over 2s to get img from slow wiki just display without it
-    setTimeout(() => {
-      setImagLoaded(true);
-    }, 2000);
-  }, [itemName]);
-
   const formattedData = useMemo(() => {
-    console.log(data);
     return (
-      data?.map(
-        (market) =>
+      data?.map((market) => ({
+        ...market,
+        data:
           market?.data?.timestamps?.map((timestamp, key) => ({
-            location: market.location,
-            quality: market.quality,
             item_id: market.item_id,
             timestamps: timestamp,
             prices_avg: market.data.prices_avg[key],
             item_count: market.data.item_count[key],
-          })) || []
-      ) || []
+          })) || [],
+      })) || []
     );
   }, [data]);
 
   if (isError) return <h1>Error fetching data from Albion Data Project</h1>;
-  if (isLoading || !imgLoaded) return <Loader />;
+  if (isLoading) return <Loader />;
 
   return (
     <div>
-      <ItemDescription item={selectedItem} enchantment={selectedEnchantment} />
+      <ItemDescription item={selectedItem} showIcon={false} />
       <div className="cities-wrapper">
         {formattedData.map((market, i) => (
           <Table
-            title={market[0].location}
+            title={
+              <div className="table-title">
+                {showIcons && (
+                  <img
+                    src={getItemIconUrl({
+                      identifier: itemName,
+                      quality: market.quality,
+                      size: 75,
+                    })}
+                    alt={QUALITIES_ENUM[market.quality]}
+                  />
+                )}
+                {`${market.location} - ${QUALITIES_ENUM[market.quality]}`}
+              </div>
+            }
             columns={columns}
-            data={market}
+            data={market.data}
             key={i}
           />
         ))}

@@ -1,0 +1,29 @@
+.table-icon {
+  position: relative;
+  height: 75px;
+  width: 75px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.in-table-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+}
+
+.table-icon-text {
+  width: 66px;
+  overflow: hidden;
+}

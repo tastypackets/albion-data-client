@@ -17,7 +17,11 @@ import {
 import { selectTheme } from "../../selectTheme";
 import "./history.css";
 
-export function History(): ReactElement {
+type HistoryProps = {
+  showIcons: boolean;
+};
+
+export function History({ showIcons }: HistoryProps): ReactElement {
   const [selectedItem, setSelectedItem] = useState<ItemOption | null>(null);
   const [selectedEnchantment, setSelectedEnchantment] =
     useState<EnchantmentOption | null>(null);
@@ -80,6 +84,7 @@ export function History(): ReactElement {
           selectedMarket={selectedMarket}
           selectedQuality={selectedQuality}
           selectedEnchantment={selectedEnchantment}
+          showIcons={showIcons}
         />
       )}
     </div>

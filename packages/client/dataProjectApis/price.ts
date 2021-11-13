@@ -1,25 +1,20 @@
 import {
-  TItemID,
   TMarkets,
   QUALITIES_ENUM,
   TPrice,
   marketList,
 } from "@albion-data/types";
-import { AxiosResponse } from "axios";
+import axios, { AxiosResponse } from "axios";
 
-import {
-  axiosClient,
-  flattenOptionalArray,
-  dynamicQueryParams,
-  appendUTC,
-} from "./utils";
+import { flattenOptionalArray, dynamicQueryParams, appendUTC } from "../utils";
+import { basePricseUrl } from "./baseUrl";
 
 /**
  * @description Paramters for Prices API calls
  */
 export type TPriceParams = {
   /** @description ID of the item you want to lookup */
-  itemList: TItemID | TItemID[];
+  itemList: string | string[];
   /** @description The city or cities to lookup the item in */
   locations?: TMarkets | TMarkets[];
   /** @description The quality level of the item, for example normal = 1 */
@@ -37,8 +32,8 @@ export async function getPriceRaw(
   const locations = flattenOptionalArray(params.locations || [...marketList]);
   const qualities = flattenOptionalArray(params.qualities);
 
-  const url = `Prices/${encodeURIComponent(items)}.json`;
-  return await axiosClient.get<TPrice[]>(url, {
+  const url = `${basePricseUrl}/${encodeURIComponent(items)}.json`;
+  return await axios.get<TPrice[]>(url, {
     params: dynamicQueryParams({
       locations,
       qualities,
