@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/albion-data-client/static/css/main.4040de67.chunk.css",
-    "main.js": "/albion-data-client/static/js/main.be8478ae.chunk.js",
-    "main.js.map": "/albion-data-client/static/js/main.be8478ae.chunk.js.map",
+    "main.css": "/albion-data-client/static/css/main.c0b8aa02.chunk.css",
+    "main.js": "/albion-data-client/static/js/main.02cfe1e4.chunk.js",
+    "main.js.map": "/albion-data-client/static/js/main.02cfe1e4.chunk.js.map",
     "runtime-main.js": "/albion-data-client/static/js/runtime-main.3913fe11.js",
     "runtime-main.js.map": "/albion-data-client/static/js/runtime-main.3913fe11.js.map",
-    "static/js/2.91411a6f.chunk.js": "/albion-data-client/static/js/2.91411a6f.chunk.js",
-    "static/js/2.91411a6f.chunk.js.map": "/albion-data-client/static/js/2.91411a6f.chunk.js.map",
+    "static/js/2.d17eefc9.chunk.js": "/albion-data-client/static/js/2.d17eefc9.chunk.js",
+    "static/js/2.d17eefc9.chunk.js.map": "/albion-data-client/static/js/2.d17eefc9.chunk.js.map",
     "index.html": "/albion-data-client/index.html",
-    "static/css/main.4040de67.chunk.css.map": "/albion-data-client/static/css/main.4040de67.chunk.css.map",
-    "static/js/2.91411a6f.chunk.js.LICENSE.txt": "/albion-data-client/static/js/2.91411a6f.chunk.js.LICENSE.txt"
+    "static/css/main.c0b8aa02.chunk.css.map": "/albion-data-client/static/css/main.c0b8aa02.chunk.css.map",
+    "static/js/2.d17eefc9.chunk.js.LICENSE.txt": "/albion-data-client/static/js/2.d17eefc9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3913fe11.js",
-    "static/js/2.91411a6f.chunk.js",
-    "static/css/main.4040de67.chunk.css",
-    "static/js/main.be8478ae.chunk.js"
+    "static/js/2.d17eefc9.chunk.js",
+    "static/css/main.c0b8aa02.chunk.css",
+    "static/js/main.02cfe1e4.chunk.js"
   ]
 }
