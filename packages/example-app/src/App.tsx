@@ -51,7 +51,7 @@ export default function App(): ReactElement {
       <div className="header-wrapper">
         <header className="App-header">
           <a
-            href="https://github.com/tastypackets/albion-data-client"
+            href="https://www.npmjs.com/package/@albion-data/client"
             target="_blank"
             rel="noopener noreferrer"
           >
