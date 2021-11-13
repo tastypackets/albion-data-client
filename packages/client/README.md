@@ -67,6 +67,25 @@ getPriceData({
 });
 ```
 
+Generate icon URLs for the [Albion Render API](https://wiki.albiononline.com/wiki/API:Render_service), user must provide item identifier or the localized name and locale.
+
+```javascript
+getItemIconUrl({
+  identifier: "T4_OFF_SHIELD", // String indentifier of item, like
+  quality: 2; // Number repersenting the quality of the item (see QUALITIES_ENUM)
+  size: 50; // Sets width and height in px
+});
+
+// Return: https://render.albiononline.com/v1/item/T4_OFF_SHIELD.png
+
+getSpellIconUrl({
+  identifier: "HASTE",
+});
+getDestinyBoardIconUrl({
+  identifier: "ADVENTURER_ADEPT"
+});
+```
+
 ## Useful Data / Types
 
 This repo exports everything export from [@albion-data/types](https://www.npmjs.com/package/@albion-data/types), here are some extra helpful types to know about.

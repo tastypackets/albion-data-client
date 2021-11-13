@@ -34,12 +34,12 @@ type ReuseableIconById = Omit<TIconById, "subDirectory">;
 type ReuseableIconByLocale = Omit<TIconByLocale, "subDirectory">;
 
 // If localizedName is passed instead of identifier it must have the locale as well
-export type TIconParams = TIconById | TIconByLocale;
+type TIconParams = TIconById | TIconByLocale;
 
 /**
  * @description Generate a url for item icon
  */
-export function getIcon({
+function getIcon({
   identifier,
   localizedName,
   subDirectory,
