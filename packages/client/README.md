@@ -86,6 +86,22 @@ getDestinyBoardIconUrl({
 });
 ```
 
+Get the localized name and descirption for an item using the item id.
+
+```javascript
+getItemLocale({
+  identifier: "T4_OFF_SHIELD", // String indentifier of item, like
+  locale: "en-US", // Optional, defaults to en-US
+});
+
+//
+{
+  "id":"T4_OFF_SHIELD",
+  "name":"Adept's Shield",
+  "description":"Equipment Item"
+}
+```
+
 ## Useful Data / Types
 
 This repo exports everything export from [@albion-data/types](https://www.npmjs.com/package/@albion-data/types), here are some extra helpful types to know about.
