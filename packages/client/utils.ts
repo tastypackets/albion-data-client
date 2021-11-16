@@ -18,14 +18,14 @@ export function convertDateToString(date?: Date | string): string {
 }
 
 type ParamsObj = {
-  [key: string]: number | string | undefined;
+  [key: string]: number | string | boolean | undefined;
 };
 
 export function dynamicQueryParams(params: ParamsObj): ParamsObj {
   const queryParams: ParamsObj = {};
 
   for (const [key, value] of Object.entries(params)) {
-    if (value) {
+    if (value || typeof value === "boolean") {
       queryParams[key] = value;
     }
   }

@@ -27,4 +27,15 @@ export enum ENCHANTMENTS_ENUM {
   Exceptional,
 }
 
+export enum TIERS_ENUM {
+  Beginner = 1,
+  Novice = 2,
+  Journeyman = 3,
+  Adept = 3,
+  Expert = 4,
+  Master = 5,
+  Grandmaster = 6,
+  Elder = 7,
+}
+
 export type AllowedTimeScales = 1 | 2 | 3 | 4 | 5 | 6;
