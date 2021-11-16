@@ -1,8 +1,18 @@
 # About
 
-This is helpful package for working with the [Albion Data Project API](), this is the initial release and feature set / docs are a bit limited right now.
+This is helpful package for working with the [Albion Data Project API](https://www.albion-online-data.com/), this is the initial release and feature set / docs are a bit limited right now.
 
 There is a basic demo app that shows off how to use the methods to make a bags price lookup app in ReactJS. The code can be [viewed on the GitHub repo](https://github.com/tastypackets/albion-data-client/tree/main/packages/example-app) and the app can be [viewed on the GitHub Pages](https://tastypackets.github.io/albion-data-client/).
+
+Supports:
+
+- Getting Chart data
+- Getting Gold data
+- Getting Price data
+- Getting Item icons urls
+- Getting Spell icon urls
+- Getting Destiny board icon urls
+- Getting icon locale name and description
 
 ## Getting started
 
