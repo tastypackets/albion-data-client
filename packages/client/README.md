@@ -104,7 +104,7 @@ getItemLocale({
   locale: "en-US", // Optional, defaults to en-US
 });
 
-//
+// Example response
 {
   "id":"T4_OFF_SHIELD",
   "name":"Adept's Shield",
