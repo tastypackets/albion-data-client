@@ -72,8 +72,8 @@ Generate icon URLs for the [Albion Render API](https://wiki.albiononline.com/wik
 ```javascript
 getItemIconUrl({
   identifier: "T4_OFF_SHIELD", // String indentifier of item, like
-  quality: 2; // Number repersenting the quality of the item (see QUALITIES_ENUM)
-  size: 50; // Sets width and height in px
+  quality: 2, // Number repersenting the quality of the item (see QUALITIES_ENUM)
+  size: 50, // Sets width and height in px
 });
 
 // Return: https://render.albiononline.com/v1/item/T4_OFF_SHIELD.png
@@ -82,7 +82,7 @@ getSpellIconUrl({
   identifier: "HASTE",
 });
 getDestinyBoardIconUrl({
-  identifier: "ADVENTURER_ADEPT"
+  identifier: "ADVENTURER_ADEPT",
 });
 ```
 
