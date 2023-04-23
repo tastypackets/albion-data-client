@@ -1,3 +1,7 @@
+# DEPRECATED
+
+I no longer play this game and no many people have used this module, if you'd like to take it over in the future feel free to reach out.
+
 # albion-data-client
 
 API client for albion-online-data.com
